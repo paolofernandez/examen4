@@ -26,8 +26,14 @@ public class Anho {
 	}
 	
 	public boolean esBisiesto(){
-		if (anho%4==0 && anho%100 != 0)
-			return true;
+		if (anho%4==0)
+			if (anho%100 == 0)
+				if(anho%400 == 0)
+					return true;
+				else
+					return false;
+			else
+				return true;
 		else
 			return false;
 	}

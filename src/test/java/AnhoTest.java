@@ -52,4 +52,15 @@ public class AnhoTest {
 		anho.setAnho(200);
 		assertEquals(false, anho.esBisiesto());
 	}
+	
+	@Test
+	public void anhoDivisbleEntre4y100peroNo400() {
+		anho.setAnho(100);
+		assertEquals(false, anho.esBisiesto());
+	}
+	@Test
+	public void anhoDivisbleEntre4y100y400() {
+		anho.setAnho(800);
+		assertEquals(true, anho.esBisiesto());
+	}
 }
